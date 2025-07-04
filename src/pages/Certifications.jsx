@@ -3,6 +3,10 @@ import achievements from "../data/achievements";
 export default function Certifications() {
   return (
     <section id="certifications" className="min-h-screen bg-gray-50 p-8">
+      <div
+        className="bg-white/10 backdrop-blur-md p-10 rounded-xl shadow-lg border border-white/10 w-full max-w-5xl text-center"
+        data-aos="fade-up"
+      ></div>
       <h2 className="text-3xl font-bold text-indigo-700 mb-10 text-center">
         Achievements & Certifications
       </h2>
