@@ -3,6 +3,10 @@ import projects from "../data/Projects";
 export default function Projects() {
   return (
     <section  id="projects" className="p-8 min-h-screen bg-gray-50">
+      <div
+        className="bg-white/10 backdrop-blur-md p-10 rounded-xl shadow-lg border border-white/10 w-full max-w-5xl text-center"
+        data-aos="fade-up"
+      ></div>
       <h2 className="text-3xl font-bold text-indigo-700 mb-8 text-center">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map(project => (

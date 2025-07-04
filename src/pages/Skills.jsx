@@ -5,7 +5,7 @@ export default function Skills() {
     "Frontend": ["React", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     "Backend": ["Node.js", "Express.js", "Firebase"],
     "Tools & Others": ["Git", "GitHub", "Figma", "VS Code", "Netlify", "cursor"],
-    "Problem Solving": ["DSA", "LeetCode", "HackerRank", "Codeforces", "CodeChef"],
+    "Problem Solving": ["DSA", "LeetCode", "Vjudge", "Codeforces", "CodeChef"],
   };
 
   return (
