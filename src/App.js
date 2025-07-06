@@ -1,6 +1,6 @@
 import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
-import Skills from "./pages/Skills";
+import Skills from "./pages/skills";
 import Projects from "./pages/Projects";
 import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
