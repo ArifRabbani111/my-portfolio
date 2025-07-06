@@ -15,10 +15,18 @@ export default function Sidebar() {
     <aside className="w-64 bg-indigo-900 text-white p-6 flex flex-col items-center sticky top-0 h-screen">
         <div className="mb-6">
             
-          <h1 className="text-3xl font-bold text-blue-100">R D N</h1>
+        <a
+    href="https://www.facebook.com/profile.php?id=61576377830342"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-3xl font-bold italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent hover:underline transition"
+    >
+    R D N
+</a>
+
 
   
-    </div>
+      </div>
 
       <img src="/inside.jpg" alt="Arif" className="w-32 h-32 rounded-full mb-4 border-4 border-white" />
       <h2 className="text-2xl font-semibold">Arif Rabbani</h2>
