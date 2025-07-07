@@ -1,39 +1,41 @@
-import achievements from "../data/achievements";
+export default function Achievements() {
+  const achievements = [
+    {
+      title: "Programming Hero Certification",
+      image: "/assets/certifications/cert1.png",
+    },
+    {
+      title: "Meta Front-End Developer",
+      image: "/assets/certifications/cert2.png",
+    },
+    {
+      title: "React Course Certificate",
+      image: "/assets/certifications/cert3.png",
+    },
+    // Add more as needed
+  ];
 
-export default function Certifications() {
   return (
-    <section id="certifications" className="min-h-screen bg-gray-50 p-8">
+    <section id="certifications" className="min-h-screen px-6 py-10 flex items-center justify-center">
       <div
-        className="bg-white/10 backdrop-blur-md p-10 rounded-xl shadow-lg border border-white/10 w-full max-w-5xl text-center"
+        className="bg-white/10 backdrop-blur-md p-10 rounded-xl shadow-lg border border-white/10 max-w-6xl w-full"
         data-aos="fade-up"
-      ></div>
-      <h2 className="text-3xl font-bold text-indigo-700 mb-10 text-center">
-        Achievements & Certifications
-      </h2>
+      >
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">Achievements & Certifications</h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {achievements.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white border border-gray-200 rounded-xl p-6 shadow hover:shadow-lg transition"
-          >
-            <h3 className="text-xl font-semibold text-indigo-700 mb-2">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 text-sm mb-2">{item.description}</p>
-            <p className="text-gray-400 text-xs mb-4">{item.date}</p>
-            {item.link && (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 underline text-sm"
-              >
-                View Certificate
-              </a>
-            )}
-          </div>
-        ))}
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          {achievements.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/20 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition"
+            >
+              <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+              <div className="p-4 text-white">
+                <h3 className="font-semibold text-lg">{item.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

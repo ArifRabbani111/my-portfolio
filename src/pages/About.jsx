@@ -7,10 +7,11 @@ export default function About() {
       >
         {/* Image */}
         <img
-          src="/profile.jpg"
-          alt="Arif Rabbani"
-          className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-md"
+         src="/inside.jpg"
+         alt="Arif Rabbani"
+         className="w-40 h-40 object-cover clip-teardrop border-4 border-white shadow-lg"
         />
+
 
         {/* Text Content */}
         <div className="text-white">

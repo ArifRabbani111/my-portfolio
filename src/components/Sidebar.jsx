@@ -28,7 +28,7 @@ export default function Sidebar() {
   
       </div>
 
-      <img src="/inside.jpg" alt="Arif" className="w-32 h-32 rounded-full mb-4 border-4 border-white" />
+      <img src="/profile.jpg" alt="Arif" className="w-32 h-32 rounded-full mb-4 border-4 border-white" />
       <h2 className="text-2xl font-semibold">Arif Rabbani</h2>
       <p className="text-sm text-indigo-100 text-center mb-6">Software Engineer</p>
 
