@@ -12,8 +12,13 @@ export default function App() {
       <Sidebar />
       <main className="flex-1 px-6 md:px-12 py-10 space-y-32 overflow-x-hidden">
         <div className="text-center mt-8 text-white" data-aos="fade-down">
-          <h1 className="text-4xl font-bold mb-2">Turning Ideas into Reality</h1>
-          <p className="text-blue-100">Passionate about code, design, and continuous growth</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">Turning Ideas into Reality</h1>
+          <p className="text-blue-100 mt-2">
+            Passionate about code, design, and continuous growth
+          </p>
+          <p className="text-red-200 text-6xl font-extrabold mt-20 leading-snug">
+          Hi, I'm <span className="underline">Arif Rabbani</span>,<br /> a Software Engineer based in Bangladesh.
+          </p>
         </div>
         <About />
         <Skills />
