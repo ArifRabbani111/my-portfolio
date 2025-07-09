@@ -16,9 +16,27 @@ export default function App() {
           <p className="text-blue-100 mt-2">
             Passionate about code, design, and continuous growth
           </p>
-          <p className="text-red-200 text-6xl font-extrabold mt-20 leading-snug">
-          Hi, I'm <span className="underline">Arif Rabbani</span>,<br /> a Software Engineer based in Bangladesh.
-          </p>
+        <section className="min-h-screen flex flex-col md:flex-row items-center justify-between gap-12 px-6 py-20 bg-gradient-to-r from-[#0f1c3f] to-[#1e3a8a] text-white">
+  {/* Left Side – Text */}
+      <div className="md:w-1/2 text-center md:text-left">
+        <h1 className="text-6xl font-extrabold leading-tight mb-4">
+          Hi, I'm <span className="underline text-white">Arif Rabbani</span>,
+        </h1>
+       <p className="text-xl text-blue-100">
+      a passionate Software Engineer based in Bangladesh.
+        </p>
+      </div>
+
+  {/* Right Side – Image */}
+      <div className="md:w-1/3 w-64 h-64 rounded-full shadow-xl border-4 border-blue-400">
+      <img
+      src="/profile.jpg"
+      alt="Arif Rabbani"
+      className="w-80 h-80 object-cover border-4 border-blue-400 shadow-2xl transition-all duration-500 hover:scale-105"
+      />
+      </div>
+      </section>
+
         </div>
         <About />
         <Skills />
