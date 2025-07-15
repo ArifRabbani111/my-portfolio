@@ -1,8 +1,8 @@
 export default function Achievements() {
   const achievements = [
     {
-      title: "Programming Hero Certification",
-      image: "/assets/certifications/cert1.png",
+      title: "Python and Data Science Certification",
+      image: "/PDS.jpg",
     },
     {
       title: "Meta Front-End Developer",

@@ -1,8 +1,8 @@
 const achievements = [
     {
-      title: "React Basics Certification",
-      description: "Completed React Basics course by Meta on Coursera.",
-      date: "April 2024",
+      title: "Python and Data Science Certification",
+      description: "Completed Completed Python and basic Data Science in IICT organized by EDGE.",
+      date: "Feb 2025",
       link: "https://www.coursera.org/certificate/example"
     },
     {

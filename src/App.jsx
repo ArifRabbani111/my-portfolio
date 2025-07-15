@@ -30,7 +30,7 @@ export default function App() {
   {/* Right Side – Image */}
       <div className="md:w-1/3 w-64 h-64 rounded-full shadow-xl border-4 border-blue-400">
       <img
-      src="/profile.jpg"
+      src="/new.jpg"
       alt="Arif Rabbani"
       className="w-80 h-80 object-cover border-4 border-blue-400 shadow-2xl transition-all duration-500 hover:scale-105"
       />
