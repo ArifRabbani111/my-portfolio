@@ -1,6 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
 import Skills from "./pages/skills";
+import CP from "./pages/CP";
 import Projects from "./pages/Projects";
 import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
@@ -28,11 +29,11 @@ export default function App() {
       </div>
 
   {/* Right Side – Image */}
-      <div className="md:w-1/3 w-64 h-64 rounded-full shadow-xl border-4 border-blue-400">
+      <div className="md:w-1/3 w-72 h-96">
       <img
-      src="/new.jpg"
+      src="/profile.jpg"
       alt="Arif Rabbani"
-      className="w-80 h-80 object-cover border-4 border-blue-400 shadow-2xl transition-all duration-500 hover:scale-105"
+      className="w-full h-full object-cover rounded-2xl border-4 border-blue-400 shadow-2xl transition-transform duration-500 hover:scale-105"
       />
       </div>
       </section>
@@ -41,6 +42,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <CP />
         <Certifications />
         <Contact />
       </main>

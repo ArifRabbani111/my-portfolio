@@ -15,6 +15,14 @@ export default function Projects() {
       stack: ["Python", "Pygame", "OpenGameArt", "Arcade Game"],
       link: "https://github.com/thebackbencher666/HIT",
     },
+    {
+      title: "Little Pirate Game",
+      description: "A fun JavaScript-based 2D game where players collect coins, jump through obstacles, and fight enemies. Built using vanilla JavaScript and canvas.",
+      image: "littlepirate.jpg",
+      stack: ["JavaScript", "HTML5", "CSS3", "Canvas API"],
+      link: "https://github.com/thebackbencher666/LittlePirateGame",
+    },
+    
     // Add more as needed
   ];
 
