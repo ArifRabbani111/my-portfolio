@@ -22,6 +22,30 @@ export default function Projects() {
       stack: ["JavaScript", "HTML5", "CSS3", "Canvas API"],
       link: "https://github.com/thebackbencher666/LittlePirateGame",
     },
+    {
+      title: "Joke Extension",
+      description:
+        "A Chrome extension that fetches clean, random jokes from JokeAPI. Great for a quick laugh during coding or meetings. Built with vanilla JS.",
+      image: "icon.png", // add visual or placeholder image
+      stack: ["JavaScript", "HTML", "CSS"],
+      link: "https://github.com/thebackbencher666/joke-extension",
+    },
+    {
+      title: "SPL Assignment",
+      description:
+        "A C programming assignment involving data structures to compute statistical metrics (average, standard deviation).",
+      image: "spl-assignment.png",
+      stack: ["C", "Data Structures", "Algorithms"],
+      link: "https://github.com/thebackbencher666/spl-assignment",
+    },
+    {
+      title: "API Project Collection",
+      description: "A curated collection of beginner to advanced API-based projects including weather app, crypto tracker, currency converter, dictionary, and more.",
+      image: "ap.jpg", // Add this image in your public/ folder
+      stack: ["JavaScript", "REST APIs", "HTML", "CSS"],
+      link: "https://github.com/ArifRabbani111/API",
+    }
+    
     
     // Add more as needed
   ];

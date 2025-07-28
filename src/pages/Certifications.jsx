@@ -4,14 +4,7 @@ export default function Achievements() {
       title: "Python and Data Science Certification",
       image: "/PDS.jpg",
     },
-    {
-      title: "Meta Front-End Developer",
-      image: "/assets/certifications/cert2.png",
-    },
-    {
-      title: "React Course Certificate",
-      image: "/assets/certifications/cert3.png",
-    },
+    
     // Add more as needed
   ];
 
