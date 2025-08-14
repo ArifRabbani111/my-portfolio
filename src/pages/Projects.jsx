@@ -1,11 +1,25 @@
 export default function Projects() {
   const projects = [
     {
+      title: "ClipTalk",
+      description: "ClipTalk is a web application delivering a seamless, personalized entertainment experience. It leverages AI-driven recommendations, social interaction features, and genuine user reviews to help users discover and enjoy content effortlessly.",
+      image: "clip.png", // Optional thumbnail
+      stack: ["react", "nodejs", "mongodb", "tailwindcss", "express"],
+      link: "https://github.com/ArifRabbani111/ClipTalk"
+    },
+    {
+      title: "AIIM",
+      description: "A web based ChatAPP that allows users to chat with AI models like ChatGPT along with messaging with other users. Built with Typescript, Convex, and MongoDB.",
+      image: "aiim.jpg", // Optional thumbnail
+      stack: ["TypeScript", "Convex", "MongoDB", "React", "Tailwind CSS"],
+      link: "https://github.com/ArifRabbani111/aiim"
+    },
+    {
       title: "ChatApp",
       description: "A real-time chat application built with React Native and Firebase.",
       image: "2.jpg", // Optional thumbnail
       stack: ["React Native", "Firebase", "Expo"],
-      link: "https://github.com/thebackbencher666/ChatApp",
+      link: "https://github.com/ArifRabbani111/ChatApp",
     },
     {
       title: "HIT Game",
@@ -13,14 +27,14 @@ export default function Projects() {
         "HIT is a 2D arcade-style multiplayer space shooter built in Python with Pygame. Engage in duels, dodge bullets, and beat the high score!",
       image: "HIT.png",
       stack: ["Python", "Pygame", "OpenGameArt", "Arcade Game"],
-      link: "https://github.com/thebackbencher666/HIT",
+      link: "https://github.com/ArifRabbani111/HIT",
     },
     {
       title: "Little Pirate Game",
       description: "A fun JavaScript-based 2D game where players collect coins, jump through obstacles, and fight enemies. Built using vanilla JavaScript and canvas.",
       image: "littlepirate.jpg",
       stack: ["JavaScript", "HTML5", "CSS3", "Canvas API"],
-      link: "https://github.com/thebackbencher666/LittlePirateGame",
+      link: "https://github.com/ArifRabbani111/LittlePirateGame",
     },
     {
       title: "Joke Extension",
@@ -28,15 +42,7 @@ export default function Projects() {
         "A Chrome extension that fetches clean, random jokes from JokeAPI. Great for a quick laugh during coding or meetings. Built with vanilla JS.",
       image: "icon.png", // add visual or placeholder image
       stack: ["JavaScript", "HTML", "CSS"],
-      link: "https://github.com/thebackbencher666/joke-extension",
-    },
-    {
-      title: "SPL Assignment",
-      description:
-        "A C programming assignment involving data structures to compute statistical metrics (average, standard deviation).",
-      image: "spl-assignment.png",
-      stack: ["C", "Data Structures", "Algorithms"],
-      link: "https://github.com/thebackbencher666/spl-assignment",
+      link: "https://github.com/ArifRabbani111/jokes",
     },
     {
       title: "API Project Collection",
