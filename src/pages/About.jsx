@@ -39,7 +39,7 @@ export default function About() {
           </p>
 
           <a
-            href="/resume.pdf"
+            href="/arif cv.pdf"
             download
             className="bg-indigo-700 text-white px-5 py-2 rounded-md hover:bg-indigo-800 transition"
           >

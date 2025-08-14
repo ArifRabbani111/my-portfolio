@@ -63,7 +63,7 @@ export default function Home() {
         className="mt-6 space-x-4 z-10"
       >
         <a
-          href="/resume.pdf"
+          href="/arif cv.pdf"
           className="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition"
         >
           Resume
