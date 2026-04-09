@@ -10,7 +10,7 @@ import hackerRankLogo from '../assests/HackerRank.png';
 const CP = () => {
   const [cfStats, setCfStats] = useState(null);
   const [lcStats, setLcStats] = useState(null);
-  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,8 +64,6 @@ const CP = () => {
         }
       } catch (error) {
         console.error('Error fetching stats:', error);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -158,7 +156,7 @@ const CP = () => {
             My profiles across various competitive programming platforms
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {platforms.map((p, i) => (
             <motion.a
@@ -175,10 +173,10 @@ const CP = () => {
             >
               {/* Animated gradient background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${p.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-              
+
               {/* Decorative corner accent */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${p.gradient} rounded-bl-full opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-              
+
               <div className="relative z-10 p-6">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -195,7 +193,7 @@ const CP = () => {
                   </div>
                   <FaExternalLinkAlt className={`${p.iconColor} opacity-0 group-hover:opacity-100 transition-all duration-300 flex-shrink-0 ml-2`} />
                 </div>
-                
+
                 {/* Stats Section */}
                 {p.stats ? (
                   <div className="space-y-3 pt-4 border-t border-white/10">
