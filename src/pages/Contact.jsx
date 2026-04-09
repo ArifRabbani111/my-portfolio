@@ -1,7 +1,39 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef();
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: "", message: "" });
+
+    // Note: You need to replace these with your own EmailJS credentials
+    // Service ID, Template ID, and Public Key
+    emailjs.sendForm(
+      "service_k8itm6g",
+      "template_6r7i55b",
+      form.current,
+      "6SV4MISyxRUShYopo"
+    )
+      .then((result) => {
+        console.log(result.text);
+        setStatus({ type: "success", message: "Message sent successfully! I'll get back to you soon." });
+        form.current.reset();
+      }, (error) => {
+        console.log(error.text);
+        setStatus({ type: "error", message: "Failed to send message. Please try again or contact me directly via email." });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
   return (
     <section id="contact" className="w-full py-8 md:py-12 px-4 md:px-6 lg:pl-20 flex items-center justify-center relative z-10">
       <motion.div
@@ -15,7 +47,7 @@ export default function Contact() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl"></div>
 
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent relative z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -27,7 +59,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 relative z-10">
           {/* Left Side - Info */}
-          <motion.div 
+          <motion.div
             className="text-white space-y-6"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,17 +74,17 @@ export default function Contact() {
                   <p className="text-gray-300 text-sm md:text-base">Sylhet, Bangladesh</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                 <FaEnvelope className="text-accent-pink text-lg mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-base md:text-lg font-semibold mb-1">Email</h3>
-                  <a href="mailto:arifrabbani00000@email.com" className="text-gray-300 hover:text-accent-cyan transition-colors text-sm md:text-base">
-                    arifrabbani00000@email.com
+                  <a href="mailto:arifrabbani00000@gmail.com" className="text-gray-300 hover:text-accent-cyan transition-colors text-sm md:text-base">
+                    arifrabbani00000@gmail.com
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                 <FaPhone className="text-accent-purple text-lg mt-1 flex-shrink-0" />
                 <div>
@@ -62,7 +94,7 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                 <FaWhatsapp className="text-green-500 text-lg mt-1 flex-shrink-0" />
                 <div>
@@ -78,54 +110,54 @@ export default function Contact() {
             <div className="pt-4">
               <h3 className="text-base md:text-lg font-semibold mb-3">Connect with me</h3>
               <div className="flex flex-wrap gap-4 text-2xl">
-                <motion.a 
-                  href="https://github.com/thebackbencher666" 
-                  target="_blank" 
+                <motion.a
+                  href="https://github.com/thebackbencher666"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent-purple transition-colors cursor-pointer"
                 >
                   <FaGithub />
                 </motion.a>
-                <motion.a 
-                  href="https://www.linkedin.com/in/arif-rabbani-arian/" 
-                  target="_blank" 
+                <motion.a
+                  href="https://www.linkedin.com/in/arif-rabbani-arian/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent-cyan transition-colors cursor-pointer"
                 >
                   <FaLinkedin />
                 </motion.a>
-                <motion.a 
-                  href="https://www.facebook.com/arif.rabbani.10297701" 
-                  target="_blank" 
+                <motion.a
+                  href="https://www.facebook.com/arif.rabbani.10297701"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-blue-400 transition-colors cursor-pointer"
                 >
                   <FaFacebook />
                 </motion.a>
-                <motion.a 
-                  href="https://x.com/ArifRabb999" 
-                  target="_blank" 
+                <motion.a
+                  href="https://x.com/ArifRabb999"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   <FaTwitter />
                 </motion.a>
-                <motion.a 
-                  href="https://www.instagram.com/arif.rabbaani/" 
-                  target="_blank" 
+                <motion.a
+                  href="https://www.instagram.com/arif.rabbaani/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent-pink transition-colors cursor-pointer"
                 >
                   <FaInstagram />
                 </motion.a>
-                <motion.a 
-                  href="https://wa.me/8801849831855" 
-                  target="_blank" 
+                <motion.a
+                  href="https://wa.me/8801849831855"
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-green-400 transition-colors cursor-pointer"
@@ -137,7 +169,9 @@ export default function Contact() {
           </motion.div>
 
           {/* Right Side - Form */}
-          <motion.form 
+          <motion.form
+            ref={form}
+            onSubmit={sendEmail}
             className="space-y-3 md:space-y-4"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -147,6 +181,7 @@ export default function Contact() {
             <div>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Your Name"
                 className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-purple focus:border-transparent transition-all text-sm md:text-base"
                 required
@@ -155,6 +190,7 @@ export default function Contact() {
             <div>
               <input
                 type="email"
+                name="user_email"
                 placeholder="your.email@example.com"
                 className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-cyan focus:border-transparent transition-all text-sm md:text-base"
                 required
@@ -163,25 +199,35 @@ export default function Contact() {
             <div>
               <input
                 type="text"
+                name="subject"
                 placeholder="Subject"
                 className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-pink focus:border-transparent transition-all text-sm md:text-base"
               />
             </div>
             <div>
               <textarea
+                name="message"
                 rows="4"
                 placeholder="Your Message"
                 className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-purple focus:border-transparent transition-all resize-none text-sm md:text-base"
                 required
               />
             </div>
+
+            {status.message && (
+              <div className={`p-3 rounded-lg text-sm ${status.type === "success" ? "bg-green-500/20 text-green-400 border border-green-500/50" : "bg-red-500/20 text-red-400 border border-red-500/50"}`}>
+                {status.message}
+              </div>
+            )}
+
             <motion.button
               type="submit"
+              disabled={isSubmitting}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-gradient-to-r from-accent-purple via-accent-pink to-accent-cyan text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:shadow-lg hover:shadow-accent-purple/50 transition-all duration-300 text-sm md:text-base"
+              className={`w-full bg-gradient-to-r from-accent-purple via-accent-pink to-accent-cyan text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:shadow-lg hover:shadow-accent-purple/50 transition-all duration-300 text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>
           </motion.form>
         </div>
