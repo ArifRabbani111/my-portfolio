@@ -1,127 +1,139 @@
 import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
+import { FaGithub, FaLinkedin, FaCode, FaEnvelope, FaLaptopCode } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 export default function About() {
   return (
     <section id="about" className="w-full min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
-      {/* Blurred Background Image */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
-          src="/profile.jpg"
-          alt="Arif Rabbani Background"
-          className="w-full h-full object-cover"
-          style={{
-            filter: 'blur(15px) brightness(0.6)',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            width: '100%',
-            height: '100%',
-          }}
-        />
-        {/* Dark overlay for better text readability - lighter */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/60 via-dark-bg/50 to-dark-bg/60"></div>
-        {/* Additional gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-accent-purple/10 via-transparent to-accent-cyan/10"></div>
-      </div>
+      {/* Decorative gradients */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-accent-purple/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent-pink/5 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
 
-      {/* Content Overlay */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-6 lg:pl-20 py-12 md:py-20">
-        {/* Hero Section with Profile */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          {/* Greeting */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-accent-purple mb-2"
-          >
-            Hi! I am
-          </motion.p>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 text-white"
-          >
-            Arif Rabbani
-          </motion.h1>
-
-          {/* Title */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-2xl md:text-3xl lg:text-4xl text-white mb-6"
-          >
-            Software Engineer
-          </motion.p>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
-          >
-            Trainee Engineer at <span className="font-bold text-white">Pathao</span> in the Data Engineering Team & Software Engineer with experience in building modern web applications. <span className="font-bold text-accent-cyan">Check out my CV</span>
-          </motion.p>
-
-          {/* Action Buttons */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 md:mb-20"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-6 md:space-y-8"
           >
-            <motion.a
-              href="/arif cv.pdf"
-              download
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-accent-purple via-accent-pink to-accent-cyan text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-accent-purple/50 transition-all duration-300 text-center min-w-[200px]"
-            >
-              Download Resume
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-transparent border-2 border-accent-purple text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-purple/20 transition-all duration-300 text-center min-w-[200px]"
-            >
-              Get In Touch
-            </motion.a>
-          </motion.div>
-        </motion.div>
+            <div className="space-y-2">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-gray-300 text-lg md:text-xl"
+              >
+                Hello, I'm <span className="text-white font-bold">Arif Rabbani</span>
+              </motion.p>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight min-h-[2.4em] md:min-h-[auto]">
+                I'm a <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-pink inline-block min-w-[200px] md:min-w-[400px]">
+                  <ReactTyped
+                    strings={['Software Engineer', 'Fullstack Developer', 'CP Enthusiast', "AI Developer"]}
+                    typeSpeed={50}
+                    backSpeed={30}
+                    loop
+                  />
+                </span>
+              </h1>
+            </div>
 
-        {/* About Content Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-dark-card/60 backdrop-blur-xl p-6 md:p-10 rounded-2xl border border-white/20 relative overflow-hidden mt-8 md:mt-12"
-        >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent-purple/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-cyan/10 rounded-full blur-3xl"></div>
-          
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-              About Me
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed text-gray-300 mb-4">
-              Hi, I'm <span className="font-semibold text-white bg-gradient-to-r from-accent-purple to-accent-pink bg-clip-text text-transparent">Arif Rabbani</span>, a passionate Software Engineer based in Bangladesh. Currently working as a Trainee Engineer at Pathao in the Data Engineering team, I love building efficient, clean, and user-focused web applications using modern tools like React, Node.js, and Tailwind CSS.
-            </p>
-            <p className="text-gray-400 text-base italic">
-              ✨ Curious by nature. Obsessed with code quality. Always learning. ✨
-            </p>
-          </div>
-        </motion.div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed"
+            >
+              Trainee Engineer at <span className="font-bold text-white">Pathao</span> in the Data Engineering Team & Software Engineer with experience in building modern web applications. 600+ problems solved across competitive programming platforms.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-80}
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-gradient-to-r from-accent-purple to-accent-pink text-white font-semibold rounded-full hover:shadow-lg hover:shadow-accent-purple/30 transition-all duration-300"
+                >
+                  Let's Connect
+                </motion.button>
+              </Link>
+              <motion.a
+                href="/arif cv.pdf"
+                download
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 border-2 border-accent-purple/50 text-white font-semibold rounded-full hover:bg-accent-purple/10 transition-all duration-300"
+              >
+                Download Resume
+              </motion.a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="flex items-center gap-4 pt-4"
+            >
+              {[
+                { icon: <FaGithub />, href: "https://github.com/ArifRabbani111" },
+                { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/arif-rabbani-arian/" },
+                { icon: <FaCode />, href: "#cp" },
+                { icon: <FaLaptopCode />, href: "#experience" },
+                { icon: <FaEnvelope />, href: "mailto:arifrabbani00000@gmail.com" }
+              ].map((social, idx) => (
+                <motion.a
+                  key={idx}
+                  href={social.href}
+                  target={social.href.startsWith("http") ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -5, backgroundColor: "rgba(168, 85, 247, 0.2)" }}
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-accent-purple hover:border-accent-purple transition-all duration-300 text-lg md:text-xl"
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
+
+          {/* Right Side - Image Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative flex justify-center items-center py-10 md:py-0"
+          >
+            <div className="relative group">
+              {/* L-shaped corner frames */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 border-t-4 border-l-4 border-accent-purple group-hover:w-16 group-hover:h-16 transition-all duration-500"></div>
+              <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-4 border-r-4 border-accent-pink group-hover:w-16 group-hover:h-16 transition-all duration-500"></div>
+
+              {/* Profile Image Container */}
+              <div className="relative w-64 h-80 md:w-80 md:h-[420px] overflow-hidden rounded-lg shadow-2xl">
+                <img
+                  src="/profile.jpg"
+                  alt="Arif Rabbani"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              {/* Glowing background effect */}
+              <div className="absolute -z-10 inset-0 bg-accent-purple/20 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
