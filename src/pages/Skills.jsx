@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   const skillsData = {
-    "Frontend": ["React", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
-    "Backend": ["Node.js", "Express.js", "Firebase"],
-    "Tools & Others": ["Git", "GitHub", "Figma", "VS Code", "Netlify", "Cursor"],
-    "Problem Solving": ["DSA", "LeetCode", "Vjudge", "Codeforces", "CodeChef"],
+    "Languages": ["JavaScript", "Python", "TypeScript", "C/C++", "Java", "HTML5", "CSS3", "SQL"],
+    "Frameworks & Technologies": ["React", "React Native", "Expo", "Node.js", "Express.js", "FastAPI", "LangGraph", "Firebase", "AWS", "Vercel", "Socket.io", "Tailwind CSS"],
+    "Libraries": ["Axios", "Mongoose", "JWT", "bcrypt", "NumPy", "Pandas", "TensorFlow", "React Navigation"],
+    "Databases": ["MySQL", "PostgreSQL", "MongoDB", "Cloud Firestore", "Realtime Database"],
+    "Tools": ["Git", "GitHub", "Docker", "Postman", "Figma", "Canva", "Notion", "Expo CLI"],
   };
 
   const skillColors = [
@@ -14,6 +15,7 @@ export default function Skills() {
     "from-accent-cyan to-blue-500",
     "from-accent-orange to-yellow-500",
     "from-green-500 to-emerald-500",
+    "from-blue-600 to-indigo-600",
   ];
 
   return (
@@ -29,7 +31,7 @@ export default function Skills() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl"></div>
 
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent relative z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -39,9 +41,9 @@ export default function Skills() {
           Skills & Technologies
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-6 text-left relative z-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left relative z-10">
           {Object.entries(skillsData).map(([category, list], categoryIndex) => (
-            <motion.div 
+            <motion.div
               key={category}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
