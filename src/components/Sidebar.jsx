@@ -15,7 +15,7 @@ const navItems = [
 export default function Sidebar() {
   return (
     <aside className="w-64 bg-gradient-to-b from-dark-surface via-dark-card to-dark-surface text-white p-6 flex flex-col items-center sticky top-0 h-screen border-r border-white/10 backdrop-blur-xl shadow-2xl">
-      <motion.div 
+      <motion.div
         className="mb-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -38,10 +38,10 @@ export default function Sidebar() {
         className="mb-6 relative"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full blur-xl opacity-50 animate-pulse"></div>
-        <img 
-          src="/profile.jpg" 
-          alt="Arif" 
-          className="w-36 h-36 rounded-full mb-4 border-4 border-transparent bg-gradient-to-r from-accent-purple via-accent-pink to-accent-cyan p-0.5 relative z-10 shadow-2xl hover:scale-105 transition-transform duration-300" 
+        <img
+          src="/profile.jpg"
+          alt="Arif"
+          className="w-36 h-36 rounded-full mb-4 border-4 border-transparent bg-gradient-to-r from-accent-purple via-accent-pink to-accent-cyan p-0.5 relative z-10 shadow-2xl hover:scale-105 transition-transform duration-300"
         />
       </motion.div>
 
@@ -51,7 +51,7 @@ export default function Sidebar() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="text-center mb-8"
       >
-        <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2">
+        <h2 className="text-3xl font-black bg-gradient-to-r from-accent-purple via-accent-pink to-accent-purple bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent mb-2 text-glow">
           Arif Rabbani
         </h2>
         <p className="text-sm text-gray-400 font-medium">Software Engineer</p>
@@ -65,7 +65,7 @@ export default function Sidebar() {
         offset={-100}
       >
         {navItems.map((item, index) => (
-          <motion.li 
+          <motion.li
             key={item.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -85,47 +85,47 @@ export default function Sidebar() {
       </Scrollspy>
 
       {/* Social Icons */}
-      <motion.div 
+      <motion.div
         className="flex space-x-4 text-2xl mt-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <a 
-          href="https://github.com/thebackbencher666" 
-          target="_blank" 
+        <a
+          href="https://github.com/thebackbencher666"
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent-purple hover:scale-125 transition-all duration-300 cursor-pointer"
         >
           <FaGithub />
         </a>
-        <a 
-          href="https://www.linkedin.com/in/arif-rabbani-arian/" 
-          target="_blank" 
+        <a
+          href="https://www.linkedin.com/in/arif-rabbani-arian/"
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent-cyan hover:scale-125 transition-all duration-300 cursor-pointer"
         >
           <FaLinkedin />
         </a>
-        <a 
-          href="https://www.facebook.com/arif.rabbani.10297701" 
-          target="_blank" 
+        <a
+          href="https://www.facebook.com/arif.rabbani.10297701"
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-400 hover:scale-125 transition-all duration-300 cursor-pointer"
         >
           <FaFacebook />
         </a>
-        <a 
-          href="https://x.com/ArifRabb999" 
-          target="_blank" 
+        <a
+          href="https://x.com/ArifRabb999"
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-white hover:scale-125 transition-all duration-300 cursor-pointer"
         >
           <FaTwitter />
         </a>
-        <a 
-          href="https://www.instagram.com/arif.rabbaani/" 
-          target="_blank" 
+        <a
+          href="https://www.instagram.com/arif.rabbaani/"
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent-pink hover:scale-125 transition-all duration-300 cursor-pointer"
         >

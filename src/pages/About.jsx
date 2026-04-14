@@ -19,17 +19,23 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6 md:space-y-8"
           >
-            <div className="space-y-2">
+            <div className="space-y-4">
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-gray-300 text-lg md:text-xl"
+                className="text-accent-purple font-semibold tracking-widest uppercase text-sm md:text-base"
               >
-                Hello, I'm <span className="text-white font-bold">Arif Rabbani</span>
+                Hello, I'm
               </motion.p>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight min-h-[2.4em] md:min-h-[auto]">
-                I'm a <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-pink inline-block min-w-[200px] md:min-w-[400px]">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple via-accent-pink to-accent-purple bg-[length:200%_auto] animate-gradient text-glow">
+                  Arif Rabbani
+                </span>
+              </h1>
+              <div className="text-2xl md:text-3xl lg:text-4xl text-gray-300 font-bold flex items-center gap-3">
+                <span className="text-white/80">I'm a</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-pink">
                   <ReactTyped
                     strings={['Software Engineer', 'Fullstack Developer', 'CP Enthusiast', "AI Developer"]}
                     typeSpeed={50}
@@ -37,7 +43,7 @@ export default function About() {
                     loop
                   />
                 </span>
-              </h1>
+              </div>
             </div>
 
             <motion.p
