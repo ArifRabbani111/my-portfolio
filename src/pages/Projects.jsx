@@ -3,19 +3,27 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
+     {
+      title: "Swapnotthan",
+      description: "Swapnotthan is a web application delivering community to help people to reduce theeir distress and help them to find happiness. It uses JavaScript, React, Node.js, MongoDB, Tailwind CSS, and Express to provide a seamless user experience.",
+      stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
+      link: "https://github.com/ArifRabbani111/swapnotthan",
+      Live: "https://www.swapnotthan.org/"
+    },
     {
       title: "ClipTalk",
       description: "ClipTalk is a web application delivering a seamless, personalized entertainment experience. It leverages AI-driven recommendations, social interaction features, and genuine user reviews to help users discover and enjoy content effortlessly.",
       image: "clip.png",
       stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
-      link: "https://github.com/ArifRabbani111/ClipTalk"
+      link: "https://github.com/ArifRabbani111/ClipTalk",
+      Live: "https://clip-talk-dev.vercel.app/"
     },
     {
       title: "AIIM",
       description: "A web based ChatAPP that allows users to chat with AI models like ChatGPT along with messaging with other users. Built with Typescript, Convex, and MongoDB.",
       image: "aiim.jpg",
       stack: ["TypeScript", "Convex", "MongoDB", "React", "Tailwind CSS"],
-      link: "https://github.com/ArifRabbani111/aiim"
+      link: "https://github.com/ArifRabbani111/aiim",
     },
     {
       title: "ChatApp",
