@@ -1,64 +1,70 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaGlobe } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
-     {
+    {
       title: "Swapnotthan",
       description: "Swapnotthan is a web application delivering community to help people to reduce theeir distress and help them to find happiness. It uses JavaScript, React, Node.js, MongoDB, Tailwind CSS, and Express to provide a seamless user experience.",
       stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
-      link: "https://github.com/ArifRabbani111/swapnotthan",
-      Live: "https://www.swapnotthan.org/"
+      github: "https://github.com/ArifRabbani111/swapnotthan",
+      live: "https://www.swapnotthan.org/"
     },
     {
       title: "ClipTalk",
       description: "ClipTalk is a web application delivering a seamless, personalized entertainment experience. It leverages AI-driven recommendations, social interaction features, and genuine user reviews to help users discover and enjoy content effortlessly.",
       image: "clip.png",
       stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
-      link: "https://github.com/ArifRabbani111/ClipTalk",
-      Live: "https://clip-talk-dev.vercel.app/"
+      github: "https://github.com/ArifRabbani111/ClipTalk",
+      live: "https://clip-talk-dev.vercel.app/"
     },
     {
       title: "AIIM",
       description: "A web based ChatAPP that allows users to chat with AI models like ChatGPT along with messaging with other users. Built with Typescript, Convex, and MongoDB.",
       image: "aiim.jpg",
       stack: ["TypeScript", "Convex", "MongoDB", "React", "Tailwind CSS"],
-      link: "https://github.com/ArifRabbani111/aiim",
+      github: "https://github.com/ArifRabbani111/aiim",
+      // No live link for this project
     },
     {
       title: "ChatApp",
       description: "A real-time chat application built with React Native and Firebase.",
       image: "2.jpg",
       stack: ["React Native", "Firebase", "Expo"],
-      link: "https://github.com/ArifRabbani111/ChatApp",
+      github: "https://github.com/ArifRabbani111/ChatApp",
+      // No live link for this project
     },
     {
       title: "HIT Game",
       description: "HIT is a 2D arcade-style multiplayer space shooter built in Python with Pygame. Engage in duels, dodge bullets, and beat the high score!",
       image: "HIT.png",
       stack: ["Python", "Pygame", "OpenGameArt", "Arcade Game"],
-      link: "https://github.com/ArifRabbani111/HIT",
+      github: "https://github.com/ArifRabbani111/HIT",
+      // No live link for this project
     },
     {
       title: "Little Pirate Game",
       description: "A fun JavaScript-based 2D game where players collect coins, jump through obstacles, and fight enemies. Built using vanilla JavaScript and canvas.",
       image: "littlepirate.jpg",
       stack: ["JavaScript", "HTML5", "CSS3", "Canvas API"],
-      link: "https://github.com/ArifRabbani111/LittlePirateGame",
+      github: "https://github.com/ArifRabbani111/LittlePirateGame",
+      // No live link for this project
     },
     {
       title: "Joke Extension",
       description: "A Chrome extension that fetches clean, random jokes from JokeAPI. Great for a quick laugh during coding or meetings. Built with vanilla JS.",
       image: "icon.png",
       stack: ["JavaScript", "HTML", "CSS"],
-      link: "https://github.com/ArifRabbani111/jokes",
+      github: "https://github.com/ArifRabbani111/jokes",
+      // No live link for this project
     },
     {
       title: "API Project Collection",
       description: "A curated collection of beginner to advanced API-based projects including weather app, crypto tracker, currency converter, dictionary, and more.",
       image: "ap.jpg",
       stack: ["JavaScript", "REST APIs", "HTML", "CSS"],
-      link: "https://github.com/ArifRabbani111/API",
+      github: "https://github.com/ArifRabbani111/API",
+      // No live link for this project
     }
   ];
 
@@ -119,16 +125,37 @@ export default function Projects() {
                   ))}
                 </div>
                 
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-accent-cyan hover:text-accent-pink font-semibold text-sm transition-colors group/link"
-                >
-                  <FaGithub className="group-hover/link:scale-110 transition-transform" />
-                  View on GitHub
-                  <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
-                </a>
+                {/* Links Section */}
+                <div className="flex flex-wrap items-center gap-3">
+                  {/* GitHub Link */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-accent-cyan hover:text-accent-pink font-semibold text-sm transition-colors group/link"
+                  >
+                    <FaGithub className="group-hover/link:scale-110 transition-transform" />
+                    Code
+                    <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+
+                  {/* Live Link - Only show if project has a live URL */}
+                  {project.live && (
+                    <>
+                      <span className="text-white/20">•</span>
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group/link"
+                      >
+                        <FaGlobe className="group-hover/link:scale-110 transition-transform" />
+                        Live Demo
+                        <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+                      </a>
+                    </>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -137,4 +164,3 @@ export default function Projects() {
     </section>
   );
 }
-
