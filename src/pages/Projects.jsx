@@ -4,6 +4,12 @@ import { FaGithub, FaExternalLinkAlt, FaGlobe } from "react-icons/fa";
 export default function Projects() {
   const projects = [
     {
+      title: "pearson specter litt",
+      description: "Internal workflow for ingesting messy legal documents, extracting structured information, generating grounded case fact summaries, and improving from operator edits.",
+      stack: ["Python", "pymupdf", "pytesseract + Tesseract", "Groq", "Gemini text-embedding-004", "ChromaDB", "SQLite", "FasAPI"],
+      github: "https://github.com/ArifRabbani111/pearson-specter-litt",
+    },
+    {
       title: "Swapnotthan",
       description: "Swapnotthan is a web application delivering community to help people to reduce theeir distress and help them to find happiness. It uses JavaScript, React, Node.js, MongoDB, Tailwind CSS, and Express to provide a seamless user experience.",
       stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
