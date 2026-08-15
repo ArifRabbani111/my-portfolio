@@ -33,7 +33,7 @@ export default function Achievements() {
   ];
 
   return (
-    <section id="certifications" className="w-full py-8 md:py-12 px-4 md:px-6 flex items-center justify-center">
+    <section id="certifications" className="w-full py-20 md:py-32 px-4 md:px-6 flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

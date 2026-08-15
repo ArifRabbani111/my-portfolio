@@ -140,7 +140,7 @@ const CP = () => {
   ];
 
   return (
-    <section id="cp" className="w-full py-8 md:py-12 px-4 md:px-6 flex items-center justify-center">
+    <section id="cp" className="w-full py-20 md:py-32 px-4 md:px-6 flex items-center justify-center">
       <div className="max-w-7xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

@@ -19,6 +19,7 @@ module.exports = {
           900: '#0c4a6e',
         },
         accent: {
+          DEFAULT: '#d946ef',
           purple: '#a855f7',
           pink: '#ec4899',
           cyan: '#06b6d4',
@@ -58,4 +59,3 @@ module.exports = {
   },
   plugins: [],
 }
-

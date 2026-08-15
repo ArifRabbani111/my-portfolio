@@ -22,7 +22,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="w-full py-8 md:py-12 px-4 md:px-6 flex items-center justify-center">
+    <section id="experience" className="w-full py-20 md:py-32 px-4 md:px-6 flex items-center justify-center">
       <div className="max-w-6xl w-full">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -45,31 +45,31 @@ export default function Experience() {
               className="bg-gradient-to-br from-dark-card/50 to-dark-surface/50 backdrop-blur-xl p-6 md:p-10 rounded-2xl shadow-2xl border border-white/10 relative overflow-hidden"
             >
               {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent-purple/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-cyan/10 rounded-full blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
 
               <div className="relative z-10">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <FaBriefcase className="text-accent-purple text-xl" />
+                      <FaBriefcase className="text-accent text-xl" />
                       <h3 className="text-2xl md:text-3xl font-bold text-white">
                         {exp.position}
                       </h3>
                     </div>
-                    <div className="flex items-center gap-2 text-accent-cyan mb-2">
+                    <div className="flex items-center gap-2 text-accent mb-2">
                       <span className="text-lg md:text-xl font-semibold">{exp.company}</span>
                       <span className="text-gray-400">•</span>
                       <span className="text-gray-300">{exp.team}</span>
                     </div>
                     <div className="flex flex-wrap items-center gap-4 text-sm md:text-base text-gray-400">
                       <div className="flex items-center gap-2">
-                        <FaCalendarAlt className="text-accent-pink" />
+                        <FaCalendarAlt className="text-accent" />
                         <span>{exp.startDate} - {exp.endDate}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <FaMapMarkerAlt className="text-accent-cyan" />
+                        <FaMapMarkerAlt className="text-accent" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
@@ -87,7 +87,7 @@ export default function Experience() {
                   <ul className="space-y-2">
                     {exp.responsibilities.map((responsibility, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-gray-300">
-                        <span className="text-accent-purple mt-1.5">▹</span>
+                        <span className="text-accent mt-1.5">▹</span>
                         <span>{responsibility}</span>
                       </li>
                     ))}
@@ -101,7 +101,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 text-white text-sm font-semibold px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm"
+                        className="bg-accent/10 text-gray-200 text-sm font-medium px-3 py-1.5 rounded-md border border-accent/35 backdrop-blur-sm"
                       >
                         {tech}
                       </span>

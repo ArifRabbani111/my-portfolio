@@ -119,7 +119,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="w-full py-8 md:py-12 px-4 md:px-6 lg:pl-20 flex items-center justify-center">
+    <section id="projects" className="w-full py-20 md:py-32 px-4 md:px-6 lg:pl-20 flex items-center justify-center">
       <div className="max-w-7xl w-full">
         <motion.h2 
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
@@ -140,10 +140,10 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-gradient-to-br from-dark-card/80 to-dark-surface/80 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-white/10 hover:border-accent-purple/50 transition-all duration-300 relative"
+              className="group bg-gradient-to-br from-dark-card/80 to-dark-surface/80 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-white/10 hover:border-accent/60 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 relative"
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-purple/0 via-accent-pink/0 to-accent-cyan/0 group-hover:from-accent-purple/10 group-hover:via-accent-pink/10 group-hover:to-accent-cyan/10 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/5 transition-all duration-300"></div>
               
               {project.image && (
                 <div className="relative h-48 overflow-hidden">
@@ -157,7 +157,7 @@ export default function Projects() {
               )}
               
               <div className="p-6 text-white relative z-10">
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent-cyan transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3">
@@ -168,7 +168,7 @@ export default function Projects() {
                   {project.stack.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/10 backdrop-blur-sm"
+                      className="bg-accent/10 text-gray-200 text-xs font-medium px-3 py-1 rounded-md border border-accent/30 backdrop-blur-sm"
                     >
                       {tech}
                     </span>
@@ -182,7 +182,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-accent-cyan hover:text-accent-pink font-semibold text-sm transition-colors group/link"
+                    className="inline-flex items-center gap-2 text-accent hover:text-white font-semibold text-sm transition-colors group/link"
                   >
                     <FaGithub className="group-hover/link:scale-110 transition-transform" />
                     Code
@@ -197,7 +197,7 @@ export default function Projects() {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group/link"
+                        className="inline-flex items-center gap-2 text-accent hover:text-white font-semibold text-sm transition-colors group/link"
                       >
                         <FaGlobe className="group-hover/link:scale-110 transition-transform" />
                         Live Demo

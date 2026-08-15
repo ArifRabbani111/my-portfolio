@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full py-8 md:py-12 px-4 md:px-6 lg:pl-20 flex items-center justify-center relative z-10">
+    <section id="contact" className="w-full py-20 md:py-32 px-4 md:px-6 lg:pl-20 flex items-center justify-center relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,8 +44,8 @@ export default function Contact() {
         className="bg-gradient-to-br from-dark-card/50 to-dark-surface/50 backdrop-blur-xl p-6 md:p-10 rounded-2xl max-w-6xl w-full shadow-2xl border border-white/10 relative overflow-hidden"
       >
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
 
         <motion.h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent relative z-10"
@@ -68,7 +68,7 @@ export default function Contact() {
           >
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaMapMarkerAlt className="text-accent-cyan text-lg mt-1 flex-shrink-0" />
+                <FaMapMarkerAlt className="text-accent text-lg mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-base md:text-lg font-semibold mb-1">Location</h3>
                   <p className="text-gray-300 text-sm md:text-base">Sylhet, Bangladesh</p>
@@ -76,30 +76,30 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaEnvelope className="text-accent-pink text-lg mt-1 flex-shrink-0" />
+                <FaEnvelope className="text-accent text-lg mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-base md:text-lg font-semibold mb-1">Email</h3>
-                  <a href="mailto:arifrabbani00000@gmail.com" className="text-gray-300 hover:text-accent-cyan transition-colors text-sm md:text-base">
+                  <a href="mailto:arifrabbani00000@gmail.com" className="text-gray-300 hover:text-accent transition-colors text-sm md:text-base">
                     arifrabbani00000@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaPhone className="text-accent-purple text-lg mt-1 flex-shrink-0" />
+                <FaPhone className="text-accent text-lg mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-base md:text-lg font-semibold mb-1">Phone</h3>
-                  <a href="tel:+8801849831855" className="text-gray-300 hover:text-accent-cyan transition-colors text-sm md:text-base">
+                  <a href="tel:+8801849831855" className="text-gray-300 hover:text-accent transition-colors text-sm md:text-base">
                     +8801849831855
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaWhatsapp className="text-green-500 text-lg mt-1 flex-shrink-0" />
+                <FaWhatsapp className="text-accent text-lg mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-base md:text-lg font-semibold mb-1">WhatsApp</h3>
-                  <a href="https://wa.me/8801849831855" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors text-sm md:text-base">
+                  <a href="https://wa.me/8801849831855" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-accent transition-colors text-sm md:text-base">
                     +8801849831855
                   </a>
                 </div>
@@ -115,7 +115,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
-                  className="hover:text-accent-purple transition-colors cursor-pointer"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaGithub />
                 </motion.a>
@@ -124,7 +124,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
-                  className="hover:text-accent-cyan transition-colors cursor-pointer"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaLinkedin />
                 </motion.a>
@@ -133,7 +133,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
-                  className="hover:text-blue-400 transition-colors cursor-pointer"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaFacebook />
                 </motion.a>
@@ -151,7 +151,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
-                  className="hover:text-accent-pink transition-colors cursor-pointer"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaInstagram />
                 </motion.a>
@@ -160,7 +160,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
-                  className="hover:text-green-400 transition-colors cursor-pointer"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaWhatsapp />
                 </motion.a>
@@ -183,7 +183,7 @@ export default function Contact() {
                 type="text"
                 name="user_name"
                 placeholder="Your Name"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-purple focus:border-transparent transition-all text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all text-sm md:text-base"
                 required
               />
             </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                 type="email"
                 name="user_email"
                 placeholder="your.email@example.com"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-cyan focus:border-transparent transition-all text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all text-sm md:text-base"
                 required
               />
             </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-pink focus:border-transparent transition-all text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all text-sm md:text-base"
               />
             </div>
             <div>
@@ -209,7 +209,7 @@ export default function Contact() {
                 name="message"
                 rows="4"
                 placeholder="Your Message"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-purple focus:border-transparent transition-all resize-none text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none text-sm md:text-base"
                 required
               />
             </div>
@@ -225,7 +225,7 @@ export default function Contact() {
               disabled={isSubmitting}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`w-full bg-gradient-to-r from-accent-purple via-accent-pink to-accent-cyan text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:shadow-lg hover:shadow-accent-purple/50 transition-all duration-300 text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+              className={`w-full bg-accent text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>
