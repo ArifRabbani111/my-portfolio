@@ -10,6 +10,25 @@ export default function Projects() {
       github: "https://github.com/ArifRabbani111/pearson-specter-litt",
     },
     {
+      title: "ARIFIN",
+      description: "An intelligent data-analysis agent that combines reasoning and execution to produce evidence-driven insights from complex datasets.",
+      stack: ["Python", "FastAPI", "LangGraph", "Gemini", "PostgreSQL", "pgvector", "E2B"],
+      github: "https://github.com/ArifRabbani111/arifin-agent",
+    },
+    {
+      title: "Kotha",
+      description: "An AI-powered personal knowledge chatbot that lets users upload TXT, PDF, and DOCX files and ask context-aware questions about them.",
+      stack: ["Python", "FastAPI", "Streamlit", "LangChain", "Gemini", "FAISS"],
+      github: "https://github.com/ArifRabbani111/kotha",
+    },
+    {
+      title: "MatchTalk",
+      description: "An anonymous, event-based live chat app where users share match reactions under persistent random nicknames, with built-in rate limiting.",
+      stack: ["Next.js", "Prisma", "PostgreSQL", "JavaScript", "Vercel"],
+      github: "https://github.com/ArifRabbani111/tong-golpo",
+      live: "https://tong-golpo.vercel.app",
+    },
+    {
       title: "Swapnotthan",
       description: "Swapnotthan is a web application delivering community to help people to reduce theeir distress and help them to find happiness. It uses JavaScript, React, Node.js, MongoDB, Tailwind CSS, and Express to provide a seamless user experience.",
       stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
@@ -23,6 +42,13 @@ export default function Projects() {
       stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
       github: "https://github.com/ArifRabbani111/ClipTalk",
       live: "https://clip-talk-dev.vercel.app/"
+    },
+    {
+      title: "Movie & Book Idea Generator",
+      description: "A Gemini-powered creative writing tool that generates original movie plots and book concepts through a responsive web interface.",
+      stack: ["JavaScript", "Node.js", "Express", "Gemini API", "Tailwind CSS"],
+      github: "https://github.com/ArifRabbani111/book-and-movie-idea-generator",
+      live: "https://book-and-movie-idea-generator.onrender.com",
     },
     {
       title: "AIIM",
@@ -63,6 +89,24 @@ export default function Projects() {
       stack: ["JavaScript", "HTML", "CSS"],
       github: "https://github.com/ArifRabbani111/jokes",
       // No live link for this project
+    },
+    {
+      title: "Socket Programming Chat",
+      description: "A multi-user real-time chat and file-server system supporting uploads, downloads, deletion, file listings, and connection-status updates.",
+      stack: ["Python", "Socket Programming", "Multithreading", "File Transfer"],
+      github: "https://github.com/ArifRabbani111/socket-programming-chat",
+    },
+    {
+      title: "MNIST CNN Classifier",
+      description: "A complete deep-learning workflow for handwritten digit classification, including CNN training, evaluation, visualization, and hyperparameter tuning.",
+      stack: ["Python", "TensorFlow", "Keras", "Keras Tuner", "Jupyter"],
+      github: "https://github.com/ArifRabbani111/Deep-Learning-Project",
+    },
+    {
+      title: "Video Game Sales Prediction",
+      description: "A machine-learning pipeline that predicts global video-game sales using preprocessing, exploratory visualization, and linear regression evaluation.",
+      stack: ["Python", "scikit-learn", "Pandas", "Seaborn", "Jupyter"],
+      github: "https://github.com/ArifRabbani111/video_game_selling_prediction",
     },
     {
       title: "API Project Collection",
