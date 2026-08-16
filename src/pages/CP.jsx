@@ -70,26 +70,12 @@ const CP = () => {
     fetchData();
   }, []);
 
-  const getRatingColor = (rating) => {
-    if (!rating) return 'text-gray-400';
-    if (rating >= 2400) return 'text-red-400';
-    if (rating >= 2100) return 'text-red-300';
-    if (rating >= 1900) return 'text-purple-400';
-    if (rating >= 1600) return 'text-blue-400';
-    if (rating >= 1400) return 'text-cyan-400';
-    if (rating >= 1200) return 'text-green-400';
-    return 'text-gray-300';
-  };
-
   const platforms = [
     {
       name: 'Codeforces',
       username: 'ArifWritesCode',
       logo: codeforcesLogo,
       link: 'https://codeforces.com/profile/ArifWritesCode',
-      gradient: 'from-red-500/90 via-red-600/90 to-red-700/90',
-      bgGradient: 'from-red-500/20 to-red-700/20',
-      iconColor: 'text-red-400',
       stats: cfStats && {
         rating: cfStats.rating,
         maxRating: cfStats.maxRating,
@@ -102,18 +88,12 @@ const CP = () => {
       username: 'backbencher666',
       logo: codechefLogo,
       link: 'https://www.codechef.com/users/backbencher666',
-      gradient: 'from-purple-500/90 via-purple-600/90 to-purple-700/90',
-      bgGradient: 'from-purple-500/20 to-purple-700/20',
-      iconColor: 'text-purple-400',
     },
     {
       name: 'LeetCode',
       username: 'arif_666',
       logo: leetcodeLogo,
       link: 'https://leetcode.com/u/arif_666/',
-      gradient: 'from-yellow-500/90 via-orange-500/90 to-orange-600/90',
-      bgGradient: 'from-yellow-500/20 to-orange-600/20',
-      iconColor: 'text-yellow-400',
       stats: lcStats && {
         totalSolved: lcStats.totalSolved,
         reputation: lcStats.reputation,
@@ -124,18 +104,12 @@ const CP = () => {
       username: 'arif1000',
       logo: vjudgeLogo,
       link: 'https://vjudge.net/user/arif1000',
-      gradient: 'from-blue-500/90 via-blue-600/90 to-blue-700/90',
-      bgGradient: 'from-blue-500/20 to-blue-700/20',
-      iconColor: 'text-blue-400',
     },
     {
       name: 'HackerRank',
       username: '@arifrabbani00000',
       logo: hackerRankLogo,
       link: 'https://www.hackerrank.com/profile/arifrabbani00000',
-      gradient: 'from-green-500/90 via-emerald-500/90 to-emerald-600/90',
-      bgGradient: 'from-green-500/20 to-emerald-600/20',
-      iconColor: 'text-green-400',
     },
   ];
 
@@ -149,7 +123,7 @@ const CP = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Competitive Programming
           </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
@@ -168,30 +142,23 @@ const CP = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              whileHover={{ y: -12, scale: 1.03 }}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-dark-card/80 to-dark-surface/80 backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              className="relative overflow-hidden rounded-xl bg-dark-card border border-slate-700 hover:border-accent/60 transition-colors duration-300"
             >
-              {/* Animated gradient background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${p.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-
-              {/* Decorative corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${p.gradient} rounded-bl-full opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-
-              <div className="relative z-10 p-6">
+              <div className="p-6">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4 flex-1">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${p.gradient} p-3 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 border border-accent/40 p-3 flex items-center justify-center">
                       <img src={p.logo} alt={p.name} className="w-full h-full object-contain" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 group-hover:bg-clip-text transition-all">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
                         {p.name}
                       </h3>
                       <p className="text-sm text-gray-400 truncate">{p.username}</p>
                     </div>
                   </div>
-                  <FaExternalLinkAlt className={`${p.iconColor} opacity-0 group-hover:opacity-100 transition-all duration-300 flex-shrink-0 ml-2`} />
+                  <FaExternalLinkAlt className="text-accent flex-shrink-0 ml-2" />
                 </div>
 
                 {/* Stats Section */}
@@ -201,25 +168,25 @@ const CP = () => {
                       <>
                         <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                           <div className="flex items-center gap-2">
-                            <FaChartLine className="text-red-400 text-sm" />
+                            <FaChartLine className="text-accent text-sm" />
                             <span className="text-sm text-gray-300">Current Rating</span>
                           </div>
-                          <span className={`font-bold text-lg ${getRatingColor(p.stats.rating)}`}>
+                          <span className="font-bold text-lg text-accent">
                             {p.stats.rating || 'N/A'}
                           </span>
                         </div>
                         <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                           <div className="flex items-center gap-2">
-                            <FaTrophy className="text-yellow-400 text-sm" />
+                            <FaTrophy className="text-accent text-sm" />
                             <span className="text-sm text-gray-300">Max Rating</span>
                           </div>
-                          <span className={`font-bold text-lg ${getRatingColor(p.stats.maxRating)}`}>
+                          <span className="font-bold text-lg text-accent">
                             {p.stats.maxRating || 'N/A'}
                           </span>
                         </div>
                         <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                           <div className="flex items-center gap-2">
-                            <FaMedal className="text-purple-400 text-sm" />
+                            <FaMedal className="text-accent text-sm" />
                             <span className="text-sm text-gray-300">Rank</span>
                           </div>
                           <span className="font-semibold text-white capitalize">
@@ -232,19 +199,19 @@ const CP = () => {
                       <>
                         <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                           <div className="flex items-center gap-2">
-                            <FaCode className="text-green-400 text-sm" />
+                            <FaCode className="text-accent text-sm" />
                             <span className="text-sm text-gray-300">Problems Solved</span>
                           </div>
-                          <span className="font-bold text-lg text-green-400">
+                          <span className="font-bold text-lg text-accent">
                             {p.stats.totalSolved || 0}
                           </span>
                         </div>
                         <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
                           <div className="flex items-center gap-2">
-                            <FaStar className="text-yellow-400 text-sm" />
+                            <FaStar className="text-accent text-sm" />
                             <span className="text-sm text-gray-300">Reputation</span>
                           </div>
-                          <span className="font-bold text-lg text-yellow-400">
+                          <span className="font-bold text-lg text-accent">
                             {p.stats.reputation || 0}
                           </span>
                         </div>

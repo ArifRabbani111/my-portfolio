@@ -18,17 +18,11 @@ module.exports = {
           800: '#075985',
           900: '#0c4a6e',
         },
-        accent: {
-          DEFAULT: '#d946ef',
-          purple: '#a855f7',
-          pink: '#ec4899',
-          cyan: '#06b6d4',
-          orange: '#f97316',
-        },
+        accent: '#A855F7',
         dark: {
-          bg: '#0a0a0f',
-          surface: '#111827',
-          card: '#1f2937',
+          bg: '#0B1120',
+          surface: '#1E293B',
+          card: '#1E293B',
         }
       },
       backgroundImage: {

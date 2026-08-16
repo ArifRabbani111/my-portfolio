@@ -39,14 +39,10 @@ export default function Achievements() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-gradient-to-br from-dark-card/50 to-dark-surface/50 backdrop-blur-xl p-6 md:p-10 rounded-2xl shadow-2xl border border-white/10 max-w-6xl w-full relative overflow-hidden"
+        className="bg-dark-card p-6 md:p-10 rounded-xl border border-slate-700 max-w-6xl w-full"
       >
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl"></div>
-
         <motion.h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent relative z-10"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 md:mb-14 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -55,27 +51,25 @@ export default function Achievements() {
           Achievements & Certifications
         </motion.h2>
 
-        <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 relative z-10">
+        <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           {achievements.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="group bg-gradient-to-br from-dark-surface/80 to-dark-card/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-accent-purple/50 transition-all duration-300"
+              className="group bg-dark-surface border border-slate-700 rounded-xl overflow-hidden hover:border-accent/60 transition-colors duration-300"
             >
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent"></div>
               </div>
               <div className="p-5 text-white">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-accent-cyan transition-colors">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-accent transition-colors">
                   {item.title}
                 </h3>
                 {item.description && (
@@ -84,7 +78,7 @@ export default function Achievements() {
                   </p>
                 )}
                 {item.issuer && (
-                  <p className="text-xs text-accent-purple mb-2">
+                  <p className="text-xs text-accent mb-2">
                     {item.issuer}
                   </p>
                 )}

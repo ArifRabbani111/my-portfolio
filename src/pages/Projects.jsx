@@ -122,7 +122,7 @@ export default function Projects() {
     <section id="projects" className="w-full py-20 md:py-32 px-4 md:px-6 lg:pl-20 flex items-center justify-center">
       <div className="max-w-7xl w-full">
         <motion.h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 md:mb-14 text-center"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -139,20 +139,15 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="group bg-gradient-to-br from-dark-card/80 to-dark-surface/80 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-white/10 hover:border-accent/60 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 relative"
+              className="group bg-dark-card rounded-xl overflow-hidden border border-slate-700 hover:border-accent/60 transition-colors duration-300 relative"
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/5 transition-all duration-300"></div>
-              
               {project.image && (
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-card/80 to-transparent"></div>
                 </div>
               )}
               
@@ -168,7 +163,7 @@ export default function Projects() {
                   {project.stack.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-accent/10 text-gray-200 text-xs font-medium px-3 py-1 rounded-md border border-accent/30 backdrop-blur-sm"
+                      className="bg-accent/10 text-gray-200 text-xs font-medium px-3 py-1 rounded-md border border-accent/40"
                     >
                       {tech}
                     </span>
@@ -184,9 +179,9 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-accent hover:text-white font-semibold text-sm transition-colors group/link"
                   >
-                    <FaGithub className="group-hover/link:scale-110 transition-transform" />
+                    <FaGithub />
                     Code
-                    <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+                    <FaExternalLinkAlt className="text-xs" />
                   </a>
 
                   {/* Live Link - Only show if project has a live URL */}
@@ -199,9 +194,9 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-accent hover:text-white font-semibold text-sm transition-colors group/link"
                       >
-                        <FaGlobe className="group-hover/link:scale-110 transition-transform" />
+                        <FaGlobe />
                         Live Demo
-                        <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+                        <FaExternalLinkAlt className="text-xs" />
                       </a>
                     </>
                   )}

@@ -29,7 +29,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-14 text-center text-white"
         >
           Experience
         </motion.h2>
@@ -42,13 +42,9 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gradient-to-br from-dark-card/50 to-dark-surface/50 backdrop-blur-xl p-6 md:p-10 rounded-2xl shadow-2xl border border-white/10 relative overflow-hidden"
+              className="bg-dark-card p-6 md:p-10 rounded-xl border border-slate-700"
             >
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
-
-              <div className="relative z-10">
+              <div>
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 gap-4">
                   <div className="flex-1">
@@ -101,7 +97,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="bg-accent/10 text-gray-200 text-sm font-medium px-3 py-1.5 rounded-md border border-accent/35 backdrop-blur-sm"
+                        className="bg-accent/10 text-gray-200 text-sm font-medium px-3 py-1.5 rounded-md border border-accent/40"
                       >
                         {tech}
                       </span>

@@ -5,17 +5,15 @@ import { Link } from "react-scroll";
 
 export default function About() {
   return (
-    <section id="about" className="w-full min-h-screen flex items-center justify-center relative overflow-hidden pt-28 md:pt-36 pb-24 md:pb-32">
-      {/* Decorative gradients */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-accent-purple/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent-pink/5 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
+    <section id="about" className="w-full min-h-screen flex items-center justify-center pt-32 md:pt-40 pb-28 md:pb-36">
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Side - Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-7 md:space-y-9"
           >
@@ -66,9 +64,7 @@ export default function About() {
                 offset={-80}
               >
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-7 py-3 bg-accent text-white font-semibold rounded-md hover:shadow-lg hover:shadow-accent/30 transition-all duration-300"
+              className="px-7 py-3 bg-accent text-white font-semibold rounded-md transition-colors hover:bg-accent/90"
                 >
                   Let's Connect
                 </motion.button>
@@ -76,9 +72,7 @@ export default function About() {
               <motion.a
                 href="/arif cv.pdf"
                 download
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-7 py-3 border border-accent/60 text-white font-semibold rounded-md hover:bg-accent/10 transition-all duration-300"
+                className="px-7 py-3 border border-slate-600 text-white font-semibold rounded-md hover:border-accent transition-colors"
               >
                 Download Resume
               </motion.a>
@@ -102,8 +96,7 @@ export default function About() {
                   href={social.href}
                   target={social.href.startsWith("http") ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  whileHover={{ y: -4, backgroundColor: "rgba(217, 70, 239, 0.14)" }}
-                  className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent transition-all duration-300 text-lg"
+                  className="w-10 h-10 md:w-11 md:h-11 rounded-full border border-slate-700 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent transition-colors text-lg"
                 >
                   {social.icon}
                 </motion.a>
@@ -113,27 +106,22 @@ export default function About() {
 
           {/* Right Side - Image Section */}
           <motion.div
-            initial={{ opacity: 0, x: 28, y: 16 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative flex justify-center items-center py-10 md:py-0"
           >
-            <div className="relative group">
-              <div className="absolute -right-6 -bottom-6 h-full w-full rounded-[2rem] bg-accent/20 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-              <div className="absolute -left-5 -top-5 h-24 w-24 rounded-full border border-accent/40"></div>
+            <div className="relative">
 
               {/* Profile Image Container */}
-              <div className="relative w-64 h-80 md:w-80 md:h-[420px] overflow-hidden rounded-[1.7rem] border border-white/10 shadow-2xl">
+              <div className="relative w-64 h-80 md:w-80 md:h-[420px] overflow-hidden rounded-xl border border-slate-700">
                 <img
                   src="/profile.jpg"
                   alt="Arif Rabbani"
-                  className="w-full h-full object-cover grayscale-[15%] sepia-[8%] hue-rotate-[285deg] saturate-[1.1] transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/55 via-transparent to-accent/10 mix-blend-screen"></div>
               </div>
-
-              {/* Glowing background effect */}
-              <div className="absolute -z-10 inset-0 bg-accent/25 blur-[70px] opacity-60 transition-opacity duration-700 group-hover:opacity-100"></div>
             </div>
           </motion.div>
         </div>

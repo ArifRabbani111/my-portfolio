@@ -41,14 +41,10 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-gradient-to-br from-dark-card/50 to-dark-surface/50 backdrop-blur-xl p-6 md:p-10 rounded-2xl max-w-6xl w-full shadow-2xl border border-white/10 relative overflow-hidden"
+        className="bg-dark-card p-6 md:p-10 rounded-xl max-w-6xl w-full border border-slate-700"
       >
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent relative z-10"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-14 text-center text-white"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -57,7 +53,7 @@ export default function Contact() {
           Get In Touch
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 relative z-10">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
           {/* Left Side - Info */}
           <motion.div
             className="text-white space-y-6"
@@ -114,7 +110,6 @@ export default function Contact() {
                   href="https://github.com/thebackbencher666"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaGithub />
@@ -123,7 +118,6 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/arif-rabbani-arian/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaLinkedin />
@@ -132,7 +126,6 @@ export default function Contact() {
                   href="https://www.facebook.com/arif.rabbani.10297701"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaFacebook />
@@ -141,7 +134,6 @@ export default function Contact() {
                   href="https://x.com/ArifRabb999"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   <FaTwitter />
@@ -150,7 +142,6 @@ export default function Contact() {
                   href="https://www.instagram.com/arif.rabbaani/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaInstagram />
@@ -159,7 +150,6 @@ export default function Contact() {
                   href="https://wa.me/8801849831855"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5 }}
                   className="hover:text-accent transition-colors cursor-pointer"
                 >
                   <FaWhatsapp />
@@ -183,7 +173,7 @@ export default function Contact() {
                 type="text"
                 name="user_name"
                 placeholder="Your Name"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm md:text-base"
                 required
               />
             </div>
@@ -192,7 +182,7 @@ export default function Contact() {
                 type="email"
                 name="user_email"
                 placeholder="your.email@example.com"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm md:text-base"
                 required
               />
             </div>
@@ -201,7 +191,7 @@ export default function Contact() {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm md:text-base"
               />
             </div>
             <div>
@@ -209,13 +199,13 @@ export default function Contact() {
                 name="message"
                 rows="4"
                 placeholder="Your Message"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none text-sm md:text-base"
                 required
               />
             </div>
 
             {status.message && (
-              <div className={`p-3 rounded-lg text-sm ${status.type === "success" ? "bg-green-500/20 text-green-400 border border-green-500/50" : "bg-red-500/20 text-red-400 border border-red-500/50"}`}>
+              <div className="p-3 rounded-lg text-sm bg-accent/10 text-slate-200 border border-accent/40">
                 {status.message}
               </div>
             )}
@@ -223,9 +213,7 @@ export default function Contact() {
             <motion.button
               type="submit"
               disabled={isSubmitting}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`w-full bg-accent text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+              className={`w-full bg-accent text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:bg-accent/90 transition-colors text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>
