@@ -33,11 +33,11 @@ export default function App() {
   ];
 
   return (
-    <div className="bg-dark-bg text-[#E2E8F0] min-h-screen relative overflow-hidden">
+    <div className="bg-dark-bg text-slate-50 min-h-screen relative overflow-hidden">
 
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-dark-bg border-b border-slate-700' : 'bg-dark-bg border-b border-transparent'
+          scrolled ? 'bg-dark-bg border-b border-white/10' : 'bg-dark-bg border-b border-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between gap-5">
@@ -58,7 +58,7 @@ export default function App() {
               </Link>
             ))}
             <Link to="contact" smooth duration={500} offset={-80}
-              className="ml-3 cursor-pointer rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent/90">
+              className="ml-3 cursor-pointer rounded-md bg-white px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-gray-200">
               Contact
             </Link>
           </nav>
@@ -120,7 +120,7 @@ export default function App() {
           href="https://github.com/thebackbencher666"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon w-11 h-11 text-slate-400 flex items-center justify-center text-lg"
+          className="social-icon w-11 h-11 text-white/90 hover:text-black hover:bg-white border border-white/20 rounded-full flex items-center justify-center text-lg transition-all duration-300"
         >
           <FaGithub />
         </a>
@@ -128,7 +128,7 @@ export default function App() {
           href="https://www.linkedin.com/in/arif-rabbani-arian/"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon w-11 h-11 text-slate-400 flex items-center justify-center text-lg"
+          className="social-icon w-11 h-11 text-white/90 hover:text-black hover:bg-white border border-white/20 rounded-full flex items-center justify-center text-lg transition-all duration-300"
         >
           <FaLinkedin />
         </a>
@@ -136,7 +136,7 @@ export default function App() {
           href="https://www.facebook.com/arif.rabbani.10297701"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon w-11 h-11 text-slate-400 flex items-center justify-center text-lg"
+          className="social-icon w-11 h-11 text-white/90 hover:text-black hover:bg-white border border-white/20 rounded-full flex items-center justify-center text-lg transition-all duration-300"
         >
           <FaFacebook />
         </a>
@@ -144,7 +144,7 @@ export default function App() {
           href="https://x.com/ArifRabb999"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon w-11 h-11 text-slate-400 flex items-center justify-center text-lg"
+          className="social-icon w-11 h-11 text-white/90 hover:text-black hover:bg-white border border-white/20 rounded-full flex items-center justify-center text-lg transition-all duration-300"
         >
           <FaTwitter />
         </a>
@@ -152,7 +152,7 @@ export default function App() {
           href="https://www.instagram.com/arif.rabbaani/"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon w-11 h-11 text-slate-400 flex items-center justify-center text-lg"
+          className="social-icon w-11 h-11 text-white/90 hover:text-black hover:bg-white border border-white/20 rounded-full flex items-center justify-center text-lg transition-all duration-300"
         >
           <FaInstagram />
         </a>
@@ -160,7 +160,7 @@ export default function App() {
           href="https://wa.me/8801849831855"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon w-11 h-11 text-slate-400 flex items-center justify-center text-lg"
+          className="social-icon w-11 h-11 text-white/90 hover:text-black hover:bg-white border border-white/20 rounded-full flex items-center justify-center text-lg transition-all duration-300"
         >
           <FaWhatsapp />
         </a>

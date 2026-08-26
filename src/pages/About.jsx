@@ -64,15 +64,15 @@ export default function About() {
                 offset={-80}
               >
                 <motion.button
-              className="px-7 py-3 bg-accent text-white font-semibold rounded-md transition-colors hover:bg-accent/90"
+                  className="px-7 py-3 bg-white text-black font-semibold rounded-md shadow-lg shadow-white/10 transition-all duration-300 hover:bg-gray-200"
                 >
                   Let's Connect
                 </motion.button>
               </Link>
               <motion.a
-                href="/arif cv.pdf"
+                href="/ARIF_RABBANI_SOFTWARE_ENGINEER_RESUME.pdf"
                 download
-                className="px-7 py-3 border border-slate-600 text-white font-semibold rounded-md hover:border-accent transition-colors"
+                className="px-7 py-3 border border-white/40 bg-black/30 text-white font-semibold rounded-md transition-all duration-300 hover:bg-white hover:text-black"
               >
                 Download Resume
               </motion.a>
@@ -113,13 +113,15 @@ export default function About() {
             className="relative flex justify-center items-center py-10 md:py-0"
           >
             <div className="relative">
+              <div className="absolute inset-0 -z-10 blur-3xl bg-white/10 rounded-full scale-110" />
 
               {/* Profile Image Container */}
-              <div className="relative w-64 h-80 md:w-80 md:h-[420px] overflow-hidden rounded-xl border border-slate-700">
+              <div className="relative w-72 h-[26rem] md:w-[26rem] md:h-[34rem] overflow-hidden rounded-[1.75rem] border border-white/20 bg-neutral-900 shadow-[0_0_40px_rgba(255,255,255,0.08)]">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/10 z-10" />
                 <img
                   src="/profile.jpg"
                   alt="Arif Rabbani"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale contrast-125 brightness-75"
                 />
               </div>
             </div>

@@ -63,39 +63,39 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="space-y-4">
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaMapMarkerAlt className="text-accent text-lg mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-white text-black border border-white/30 hover:bg-gray-200 transition-colors">
+                <FaMapMarkerAlt className="text-black text-lg mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold mb-1">Location</h3>
-                  <p className="text-gray-300 text-sm md:text-base">Sylhet, Bangladesh</p>
+                  <h3 className="text-base md:text-lg font-semibold mb-1 text-black">Location</h3>
+                  <p className="text-black text-sm md:text-base">Sylhet, Bangladesh</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaEnvelope className="text-accent text-lg mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-white text-black border border-white/30 hover:bg-gray-200 transition-colors">
+                <FaEnvelope className="text-black text-lg mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold mb-1">Email</h3>
-                  <a href="mailto:arifrabbani00000@gmail.com" className="text-gray-300 hover:text-accent transition-colors text-sm md:text-base">
+                  <h3 className="text-base md:text-lg font-semibold mb-1 text-black">Email</h3>
+                  <a href="mailto:arifrabbani00000@gmail.com" className="text-black hover:text-gray-700 transition-colors text-sm md:text-base">
                     arifrabbani00000@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaPhone className="text-accent text-lg mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-white text-black border border-white/30 hover:bg-gray-200 transition-colors">
+                <FaPhone className="text-black text-lg mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold mb-1">Phone</h3>
-                  <a href="tel:+8801849831855" className="text-gray-300 hover:text-accent transition-colors text-sm md:text-base">
+                  <h3 className="text-base md:text-lg font-semibold mb-1 text-black">Phone</h3>
+                  <a href="tel:+8801849831855" className="text-black hover:text-gray-700 transition-colors text-sm md:text-base">
                     +8801849831855
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                <FaWhatsapp className="text-accent text-lg mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-white text-black border border-white/30 hover:bg-gray-200 transition-colors">
+                <FaWhatsapp className="text-black text-lg mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold mb-1">WhatsApp</h3>
-                  <a href="https://wa.me/8801849831855" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-accent transition-colors text-sm md:text-base">
+                  <h3 className="text-base md:text-lg font-semibold mb-1 text-black">WhatsApp</h3>
+                  <a href="https://wa.me/8801849831855" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-700 transition-colors text-sm md:text-base">
                     +8801849831855
                   </a>
                 </div>
@@ -110,7 +110,7 @@ export default function Contact() {
                   href="https://github.com/thebackbencher666"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-white/30 bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <FaGithub />
                 </motion.a>
@@ -118,7 +118,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/arif-rabbani-arian/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-white/30 bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <FaLinkedin />
                 </motion.a>
@@ -126,7 +126,7 @@ export default function Contact() {
                   href="https://www.facebook.com/arif.rabbani.10297701"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-white/30 bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <FaFacebook />
                 </motion.a>
@@ -134,7 +134,7 @@ export default function Contact() {
                   href="https://x.com/ArifRabb999"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-white/30 bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <FaTwitter />
                 </motion.a>
@@ -142,7 +142,7 @@ export default function Contact() {
                   href="https://www.instagram.com/arif.rabbaani/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-white/30 bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <FaInstagram />
                 </motion.a>
@@ -150,7 +150,7 @@ export default function Contact() {
                   href="https://wa.me/8801849831855"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-white/30 bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <FaWhatsapp />
                 </motion.a>
@@ -173,7 +173,7 @@ export default function Contact() {
                 type="text"
                 name="user_name"
                 placeholder="Your Name"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white text-black placeholder-gray-600 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-colors text-sm md:text-base"
                 required
               />
             </div>
@@ -182,7 +182,7 @@ export default function Contact() {
                 type="email"
                 name="user_email"
                 placeholder="your.email@example.com"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white text-black placeholder-gray-600 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-colors text-sm md:text-base"
                 required
               />
             </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white text-black placeholder-gray-600 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-colors text-sm md:text-base"
               />
             </div>
             <div>
@@ -199,13 +199,13 @@ export default function Contact() {
                 name="message"
                 rows="4"
                 placeholder="Your Message"
-                className="w-full px-4 py-2 md:px-5 md:py-3 bg-dark-bg border border-slate-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none text-sm md:text-base"
+                className="w-full px-4 py-2 md:px-5 md:py-3 bg-white text-black placeholder-gray-600 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-colors resize-none text-sm md:text-base"
                 required
               />
             </div>
 
             {status.message && (
-              <div className="p-3 rounded-lg text-sm bg-accent/10 text-slate-200 border border-accent/40">
+              <div className="p-3 rounded-lg text-sm bg-white text-black border border-white/40">
                 {status.message}
               </div>
             )}
@@ -213,7 +213,7 @@ export default function Contact() {
             <motion.button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full bg-accent text-white font-semibold px-6 py-2 md:py-3 rounded-lg hover:bg-accent/90 transition-colors text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+              className={`w-full bg-white text-black font-semibold px-6 py-2 md:py-3 rounded-lg hover:bg-gray-200 transition-colors text-sm md:text-base ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>
