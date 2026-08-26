@@ -13,8 +13,8 @@
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #050505;
-    color: #f8fafc;
+    background: #0B1120;
+    color: #E2E8F0;
   }
 
   /* Custom scrollbar */
@@ -23,16 +23,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #111111;
+    background: #1E293B;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #d4d4d8;
+    background: #a855f7;
     border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #f8fafc;
+    background: #A855F7;
   }
 }
 

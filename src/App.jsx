@@ -33,11 +33,11 @@ export default function App() {
   ];
 
   return (
-    <div className="bg-[#070707] text-slate-50 min-h-screen relative overflow-hidden">
+    <div className="bg-dark-bg text-[#E2E8F0] min-h-screen relative overflow-hidden">
 
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-[#070707]/95 border-b border-white/10 backdrop-blur-sm' : 'bg-[#070707] border-b border-transparent'
+          scrolled ? 'bg-dark-bg border-b border-slate-700' : 'bg-dark-bg border-b border-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between gap-5">
@@ -45,7 +45,7 @@ export default function App() {
             href="https://www.facebook.com/profile.php?id=61576377830342"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl md:text-4xl font-black tracking-[-0.06em] text-white leading-none"
+            className="text-xl md:text-2xl font-bold tracking-[-0.06em] text-white"
           >
             RDN
           </a>
@@ -53,23 +53,20 @@ export default function App() {
           <nav className="hidden lg:flex items-center gap-1 ml-auto">
             {navItems.filter((item) => item.id !== "contact").map((item) => (
               <Link key={item.id} to={item.id} smooth duration={500} offset={-80}
-                className="text-[11px] uppercase tracking-[0.22em] text-gray-300 hover:text-white transition-colors cursor-pointer px-3 py-2">
+                className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer px-3 py-2">
                 {item.label}
               </Link>
             ))}
-            <button className="ml-3 cursor-pointer rounded-md border border-white/15 bg-transparent px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/5">
-              Resume
-            </button>
             <Link to="contact" smooth duration={500} offset={-80}
-              className="ml-3 cursor-pointer rounded-md bg-[#ef5a5a] px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#ff6b6b]">
-              Contact Me
+              className="ml-3 cursor-pointer rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent/90">
+              Contact
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-white p-2 hover:text-red-400 transition-colors"
+            className="lg:hidden text-white p-2 hover:text-accent transition-colors"
           >
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>

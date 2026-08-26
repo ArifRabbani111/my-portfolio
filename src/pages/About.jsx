@@ -8,33 +8,30 @@ export default function About() {
     <section id="about" className="w-full min-h-screen flex items-center justify-center pt-28 md:pt-32 pb-16 md:pb-20">
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Side - Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6 md:space-y-8"
+            className="space-y-7 md:space-y-9"
           >
-            <div className="space-y-5">
+            <div className="space-y-4">
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-gray-300 font-medium tracking-[0.25em] uppercase text-[10px] md:text-xs"
+                className="text-gray-400 font-medium tracking-[0.28em] uppercase text-[11px] md:text-xs"
               >
-                Software Engineering Student • Full-Stack Developer
+                Hello, I'm
               </motion.p>
-
-              <h1 className="leading-[0.8] text-[4.6rem] sm:text-[6rem] md:text-[7.5rem] lg:text-[9.7rem] font-black tracking-[-0.08em] text-white uppercase">
-                <span className="block text-white">ARIF</span>
-                <span className="block text-white">RABBANI</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-[-0.06em] text-white leading-[0.95]">
+                Arif Rabbani
               </h1>
-
               <div className="text-xl md:text-2xl lg:text-3xl text-gray-300 font-medium flex flex-wrap items-center gap-x-2 gap-y-1">
                 <span className="text-gray-400">I'm a</span>
-                <span className="text-red-400">
+                <span className="text-accent">
                   <ReactTyped
                     strings={['Software Engineer', 'Fullstack Developer', 'CP Enthusiast', "AI Developer"]}
                     typeSpeed={50}
@@ -49,9 +46,9 @@ export default function About() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-gray-300 text-base md:text-lg max-w-xl leading-8"
+              className="text-gray-400 text-base md:text-lg max-w-lg leading-8"
             >
-              Building responsive, AI-driven web applications with React, Vue, Node.js, and MongoDB. Experienced in school platforms, job portals, and real-time communication systems.
+              Trainee Engineer at <span className="font-bold text-white">Pathao</span> in the Data Engineering Team & Software Engineer with experience in building modern web applications. 600+ problems solved across competitive programming platforms.
             </motion.p>
 
             <motion.div
@@ -67,7 +64,7 @@ export default function About() {
                 offset={-80}
               >
                 <motion.button
-                  className="px-7 py-3 bg-[#ef5a5a] text-white font-semibold rounded-md shadow-lg shadow-red-500/10 transition-all duration-300 hover:bg-[#ff6b6b]"
+                  className="px-7 py-3 bg-accent text-white font-semibold rounded-md transition-colors hover:bg-accent/90"
                 >
                   Let's Connect
                 </motion.button>
@@ -75,7 +72,7 @@ export default function About() {
               <motion.a
                 href="/ARIF_RABBANI_SOFTWARE_ENGINEER_RESUME.pdf"
                 download
-                className="px-7 py-3 border border-white/30 bg-transparent text-white font-semibold rounded-md transition-all duration-300 hover:bg-white hover:text-black"
+                className="px-7 py-3 border border-slate-600 text-white font-semibold rounded-md hover:border-accent transition-colors"
               >
                 Download Resume
               </motion.a>
@@ -99,7 +96,7 @@ export default function About() {
                   href={social.href}
                   target={social.href.startsWith("http") ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  className="w-10 h-10 md:w-11 md:h-11 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-gray-200 hover:text-red-400 hover:border-red-400 transition-colors text-lg"
+                  className="w-10 h-10 md:w-11 md:h-11 rounded-full border border-slate-700 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent transition-colors text-lg"
                 >
                   {social.icon}
                 </motion.a>
@@ -113,16 +110,16 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative flex justify-center items-center py-6 md:py-0"
+            className="relative flex justify-center items-center py-10 md:py-0"
           >
-            <div className="relative w-full max-w-[560px]">
-              <div className="absolute inset-0 -z-10 bg-white/10 blur-[100px] rounded-full" />
-              <div className="relative overflow-hidden rounded-none border-l border-white/10 bg-[#0f0f0f] shadow-[0_0_80px_rgba(255,255,255,0.05)] min-h-[480px] md:min-h-[620px]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.12),_transparent_55%)]" />
+            <div className="relative">
+
+              {/* Profile Image Container */}
+              <div className="relative w-64 h-80 md:w-80 md:h-[420px] overflow-hidden rounded-xl border border-slate-700">
                 <img
                   src="/profile.jpg"
                   alt="Arif Rabbani"
-                  className="w-full h-full object-cover grayscale contrast-125 brightness-[0.7]"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
