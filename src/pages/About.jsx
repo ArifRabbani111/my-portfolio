@@ -29,7 +29,7 @@ export default function About() {
 
               <h1 className="leading-[0.8] text-[4.6rem] sm:text-[6rem] md:text-[7.5rem] lg:text-[9.7rem] font-black tracking-[-0.08em] text-white uppercase">
                 <span className="block text-white">ARIF</span>
-                <span className="outline-text block text-transparent">RABBANI</span>
+                <span className="block text-white">RABBANI</span>
               </h1>
 
               <div className="text-xl md:text-2xl lg:text-3xl text-gray-300 font-medium flex flex-wrap items-center gap-x-2 gap-y-1">
